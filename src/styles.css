@@ -6,6 +6,8 @@ body {
     display: flex;
     justify-content: center;
     gap: 5px;
+    padding-top: 10px;
+    margin-bottom: 10px;
 }
 
 .input-form {
@@ -26,3 +28,33 @@ body {
     font-weight: 500;
     cursor: pointer;
 }
+
+.gallery {
+    display: flex;
+    max-width: 1140px;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.photo-card {
+    max-width: 360px;
+    overflow: hidden;
+    border: 1px solid red;
+}
+
+.info {
+    display: flex;
+    max-width: 100%;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .info-item {
+    display: flex;
+}  */
