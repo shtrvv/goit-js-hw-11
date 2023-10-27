@@ -2,6 +2,19 @@ body {
     background-color: azure;
 }
 
+.is-hidden {
+    position: absolute;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    width: 1px;
+}
+
 .search-form {
     display: flex;
     justify-content: center;
@@ -33,18 +46,24 @@ body {
     display: flex;
     max-width: 1140px;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 15px;
     justify-content: center;
     padding: 0;
     list-style: none;
     margin-left: auto;
     margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 10px ;
+    background-color: cadetblue;
 }
 
 .photo-card {
     max-width: 360px;
     overflow: hidden;
-    border: 1px solid red;
+    border: 1px solid white;
+    border-radius: 5px;
+    box-shadow: rgba(239, 222, 222, 0.616) 0px 3px 8px;
+    background-color: white;
 }
 
 .info {
@@ -53,6 +72,7 @@ body {
     gap: 5px;
     justify-content: center;
     align-items: center;
+    background-color: white;
 }
 
 /* .info-item {
