@@ -19,7 +19,7 @@ const options = {
 
 const observer = new IntersectionObserver(handlerLoadMore, options);
 
-let currentPage = 1;
+let currentPage = 12;
 let userPicture = "";
 
 export async function getPictures(userPicture) {
@@ -45,7 +45,7 @@ function hadlerSearch(e) {
     refs.list.innerHTML = '';
 
     userPicture = refs.form.elements.searchQuery.value;
-    currentPage = 1;
+    currentPage = 12;
     getPictures(userPicture)
         .then((data) => {
             if (data.totalHits === 0) {
@@ -75,7 +75,8 @@ function handlerLoadMore(entries, observer) {
                 galleryBox.refresh();
                     if (currentPage >= 13) {
                         observer.unobserve(refs.guard);
-                }
+                        Notiflix.Notify.warning("We're sorry, but you've reached the end of search results.");
+                    }
             })
             .catch(() => {
                 console.log('ERROR');
